@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "monumenta-gigantic-encyclopedia",
+	"version": "0.0.1-test_version-3",
+	"name": "Monumenta Gigantic Encyclopedia",
+	"description": "This mod will show you all the info about stuff in Monumenta.",
+	"authors": [
+		"MagShadowLight"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/monumenta-gigantic-encyclopedia/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"monu.encyclopedia.MonumentaGiganticEncyclopedia"
+		],
+		"client": [
+			"monu.encyclopedia.MonumentaGiganticEncyclopediaClient"
+		]
+	},
+	"mixins": [
+		"monumenta-gigantic-encyclopedia.mixins.json",
+		{
+			"config": "monumenta-gigantic-encyclopedia.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*",
+		"fabric-key-binding-api-v1": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
