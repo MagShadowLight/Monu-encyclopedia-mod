@@ -26,6 +26,7 @@ public class ACrownOfMajesty extends Screen {
 
     @Override
     public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
+
         final MultilineText text = MultilineText.create(textRenderer,
                 Text.literal("A Crown of Majesty:"),
                 Text.literal("Prerequisites:"),
