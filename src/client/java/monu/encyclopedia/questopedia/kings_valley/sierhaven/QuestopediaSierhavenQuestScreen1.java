@@ -1,15 +1,10 @@
 package monu.encyclopedia.questopedia.kings_valley.sierhaven;
 
-import monu.encyclopedia.questopedia.QuestopediaRegionsSelectionScreen;
 import monu.encyclopedia.questopedia.kings_valley.QuestopediaKingsValleyScreen;
 import monu.encyclopedia.questopedia.kings_valley.sierhaven.quests.ACrownOfMajesty;
 import monu.encyclopedia.questopedia.kings_valley.sierhaven.quests.BanditTrouble;
 import monu.encyclopedia.questopedia.kings_valley.sierhaven.quests.BaneOfTheBakers;
 import monu.encyclopedia.questopedia.kings_valley.sierhaven.quests.CastingForHelp;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.minecraft.client.font.MultilineText;
-import net.minecraft.client.gui.Drawable;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.tooltip.Tooltip;
 import net.minecraft.client.gui.widget.ButtonWidget;
@@ -40,11 +35,27 @@ public class QuestopediaSierhavenQuestScreen1 extends Screen {
 
     @Override
     public void render(MatrixStack matrices, int mouseX, int mouseY, float delta) {
-        int rectangleX = 60;
-        int rectangleY = 15;
-        int rectangleWidth = 190;
-        int rectangleHeight = 215;
-        fill(matrices, rectangleX, rectangleY, rectangleWidth, rectangleHeight, -500, 0xff000000);
+        int inLeftRectangleX = 60;
+        int inLeftRectangleY = 15;
+        int inLeftRectangleWidth = 190;
+        int inLeftRectangleHeight = 215;
+        int outLeftRectangleX = 58;
+        int outLeftRectangleY = 13;
+        int outLeftRectangleWidth = 192;
+        int outLeftRectangleHeight = 217;
+        fill(matrices, inLeftRectangleX, inLeftRectangleY, inLeftRectangleWidth, inLeftRectangleHeight, -500, 0x99E1AD01);
+        fill(matrices, outLeftRectangleX, outLeftRectangleY, outLeftRectangleWidth, outLeftRectangleHeight, -501, 0x99000000);
+
+        int inRightRectangleX = 250;
+        int inRightRectangleY = 15;
+        int inRightRectangleWidth = 450;
+        int inRightRectangleHeight = 215;
+        int outRightRectangleX = 248;
+        int outRightRectangleY = 13;
+        int outRightRectangleWidth = 452;
+        int outRightRectangleHeight = 217;
+        fill(matrices, inRightRectangleX, inRightRectangleY, inRightRectangleWidth, inRightRectangleHeight, -500, 0x99E1AD01);
+        fill(matrices, outRightRectangleX, outRightRectangleY, outRightRectangleWidth, outRightRectangleHeight, -501, 0x99000000);
         super.render(matrices, mouseX, mouseY, delta);
     }
 
@@ -176,7 +187,7 @@ public class QuestopediaSierhavenQuestScreen1 extends Screen {
                             client.setScreen(townSelectionScreen);
                         })
                         .dimensions(200, 200, 100, 15)
-                        .position(75,225)
+                        .position(200,225)
                         .tooltip(Tooltip.of(Text.literal("Take you back to previous screen.")))
                         .build()
         );
